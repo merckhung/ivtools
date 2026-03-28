@@ -32,6 +32,17 @@ The binaries are located in `bazel-bin/` and can be run directly:
 - `bazel-bin/iclass`
 - `bazel-bin/comterp`
 
+## Gallery
+
+### InterViews Drawing Editor
+![InterViews Drawing Editor](docs/InterViewsDrawingEditor.png)
+
+### GraphDraw
+![GraphDraw](docs/graphdraw.png)
+
+### Drawtool
+![Drawtool](docs/drawtool.png)
+
 ## Architecture and Modernization
 
 The codebase has been updated to support modern C++ compilers (like GCC 11+) while maintaining compatibility with the original design. Key modernization steps included:
