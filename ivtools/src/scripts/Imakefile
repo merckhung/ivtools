@@ -1,0 +1,22 @@
+XCOMM
+XCOMM scripts - miscellaneous shell scripts
+XCOMM
+
+PACKAGE = scripts_ivtools
+
+IvmkcmTargets($(PACKAGE))
+
+#if InstallRelative
+InstallScriptAs(mkgif89a.bash,$(BINDIR),mkgif89a)
+InstallScriptAs(mkgif89ac.bash,$(BINDIR),mkgif89ac)
+#endif
+InstallScriptAs(ivgetjpg.bash,$(BINDIR),ivgetjpg)
+#if InstallRelative
+InstallScriptAs(cntsrclines.bash,$(BINDIR),cntsrclines)
+#endif
+InstallScriptAs(ivtiftopnm.bash,$(BINDIR),ivtiftopnm)
+InstallScriptAs(comterp_run.bash,$(BINDIR),comterp_run)
+InstallScriptAs(csvfilt,$(BINDIR),csvfilt)
+InstallScriptAs(csvplot,$(BINDIR),csvplot)
+
+InstallScriptAs(pnmtopgm.sh,$(BINDIR),pnmtopgm)

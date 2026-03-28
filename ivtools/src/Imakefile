@@ -1,0 +1,77 @@
+XCOMM
+XCOMM everything to be built or installed
+XCOMM
+
+PACKAGE = ivtools
+
+#if 0
+#define ivxt_name ivxt
+#else
+#define ivxt_name /**/
+#endif
+
+#ifdef AceDir
+ACEDISPATCH = AceDispatch
+#else
+ACEDISPATCH =
+#endif
+
+SUBDIRS = \
+	IV-common \
+	Unidraw-common \
+	\
+	ComUtil \
+	Attribute \
+	TopoFace \
+	Time \
+	ComTerp \
+	comtest \
+	comterp_ \
+	\
+	IV \
+	InterViews \
+	IV-2_6 \
+	IV-X11 \
+	OS \
+	TIFF \
+	Dispatch \
+	dclock \
+	iclass \
+	idemo \
+	\
+	IVGlyph \
+	ivtext \
+	glyphs \
+	\
+	AttrGlyph \
+	ComGlyph \
+	glyphterp \
+	\
+	Unidraw \
+	UniIdraw \
+	idraw \
+	\
+	OverlayUnidraw \
+	$(ACEDISPATCH) \
+	drawtool \
+	\
+	ComUnidraw \
+	comdraw \
+	\
+	FrameUnidraw \
+	flipbook \
+	\
+	GraphUnidraw \
+	graphdraw \
+	\
+	DrawServ \
+	drawserv_ \
+	\
+	include \
+	scripts \
+	utils \	\
+	ivxt_name \
+	man \
+	html
+
+MakeInSubdirs($(SUBDIRS))

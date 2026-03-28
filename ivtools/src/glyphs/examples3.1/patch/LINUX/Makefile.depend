@@ -1,0 +1,32 @@
+main.o: \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/glyphs/examples3.1/patch/LINUX/../main.c \
+ /usr/include/stdc-predef.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/IV-look/kit.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/IV-look/button.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/input.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/monoglyph.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/glyph.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/coord.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/enter-scope.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/iv.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/geometry.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/_enter.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/_leave.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/resource.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/ivstd/ignores.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/observe.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/IV-look/menu.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/IV-look/stepper.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/adjust.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/action.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/telltale.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/background.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/patch.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/transformer.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/layout.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/IV-3_1/InterViews/deck.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/polyglyph.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/scrbox.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/session.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/window.h \
+ /home/merck/Code/PACK/ivtools/src_ivtools/src/include/InterViews/canvas.h

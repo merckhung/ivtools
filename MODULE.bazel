@@ -1,0 +1,22 @@
+module(
+    name = "ivtools_project",
+    version = "1.0",
+)
+
+bazel_dep(name = "rules_foreign_cc", version = "0.15.1")
+bazel_dep(name = "rules_pkg", version = "1.0.1")
+bazel_dep(name = "bazel_skylib", version = "1.7.1")
+bazel_dep(name = "platforms", version = "0.0.11")
+bazel_dep(name = "rules_cc", version = "0.1.1")
+bazel_dep(name = "rules_python", version = "1.2.0")
+bazel_dep(name = "rules_shell", version = "0.3.0")
+bazel_dep(name = "bazel_features", version = "1.30.0")
+
+# Use system toolchains for rules_foreign_cc
+register_toolchains(
+    "@rules_foreign_cc//toolchains:preinstalled_autoconf_toolchain",
+    "@rules_foreign_cc//toolchains:preinstalled_automake_toolchain",
+    "@rules_foreign_cc//toolchains:preinstalled_make_toolchain",
+    "@rules_foreign_cc//toolchains:preinstalled_pkgconfig_toolchain",
+    "@rules_foreign_cc//toolchains:preinstalled_m4_toolchain",
+)

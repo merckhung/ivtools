@@ -1,0 +1,88 @@
+January 2nd, 2022 ivtools-2.0.11b
+
+* ninth attempt at homebrew build, this time getting rid of --flat_namespace when building
+dynamic libraries.
+
+December 31st 2021 ivtools-2.0.11a
+
+* eight attempt at homebrew build, add workaround for 118 character limit.
+
+December 31st 2021 ivtools-2.0.11
+
+* seventh and maybe last attempt at a release that might build with homebrew, before ivtools-2.1.0
+
+December 29th 2021 ivtools-2.0.10
+
+* sixth attempt at a release that might build with homebrew
+
+December 28th 2021 ivtools-2.0.9
+
+* fifth attempt at a release that might build with homebrew
+
+December 28th 2021 ivtools-2.0.8
+
+* fourth attempt at a release that might build with homebrew
+
+December 27th 2021 ivtools-2.0.7
+
+* third attempt at a release that might build with homebrew
+
+December 27th 2021 ivtools-2.0.6
+
+* second attempt at a release that might build with homebrew
+
+December 27th 2021 ivtools-2.0.5
+
+* first attempt at a release that might build with homebrew
+
+October 11th 2020 ivtools-2.0.4
+
+* list (or array) comparison operators '<', '>', and '!=' for comterp.
+
+August 22nd 2020 ivtools-2.0.3
+
+* add Golang style "%v" format descriptor to comterp print func.
+
+July 5th 2020 ivtools-2.0.2
+
+* Change priority of "$$" (stream) operator to line up with other stream operators (i.e. ".." and "**").
+
+June 30th 2020 ivtools-2.0.1
+
+* Fix nested user defined funcs in comterp (the func() command).
+
+* Change isalpha(), isdigit(), and isspace() funcs to return 0 or 1
+  (instead of the bitmask which is returned for C).
+
+* Add comterp_run utility script for hands-free launching of comterp scripts.
+  Write scripts with this header:
+
+   #! /usr/bin/env comterp_run
+
+* Add csvfilt comterp script as an example of using comterp_run.
+  After installing both try "csvfilt --help".
+
+June 21st 2020 ivtools-2.0.0
+
+Non-backward compatible changes from ivtools-1.2.11:
+
+* Swap "$$" and "$" operators in comterp.  The "$$" operator is now stream() (which matches
+  the other double-character stream operators - "..", "**", and ",,") and "$" is now list().
+
+* Reverse the priority of ".." (iterate()) and "**" (repeat()), giving ".." precedence over "**".
+  The reason is because ".." is more complex than "**", like multiplication is more complex than
+  addition.
+
+* Remove symmax() and symcnt() commands because they were redundant with symid() which accepts
+  :max and :cnt keywords.
+
+Other changes;
+
+* remove patches directory, sourceforge102203.xml, aclocal.m4, README.cygwin, README.ivmkcm, and comtop.tgz
+
+* migrated all CHANGES-* files to a CHANGES directory
+
+
+
+
+

@@ -1,0 +1,72 @@
+/* This file generated from config.defs.in, */
+/* (unless this file *is* config.defs.in :) */
+
+#if !NO
+#define Prefix /usr/local
+#define BinDir Prefix/bin
+#define LibDir Prefix/lib
+#define LibAllDir Prefix/lib/ivtools
+#define IncDir Prefix/include
+#define ConfigDir LibAllDir/config
+#define ManDir Prefix/share/man
+#else
+#define Prefix /usr/local
+#define BinDir Prefix/bin/ivtools
+#define LibDir Prefix/lib/ivtools
+#define LibAllDir Prefix/lib/ivtools
+#define IncDir Prefix/include
+#define ConfigDir LibAllDir/config
+#define ManDir Prefix/share/man
+#endif
+
+#define XConfigDir /usr/lib/x86_64-linux-gnu/X11/config
+#define XIncDir /usr/include
+#define XLibDir /usr/lib/x86_64-linux-gnu
+
+#if 0
+#define AceDir 
+#define AceLibDir 
+#define AceEnabled
+#endif
+
+#if 0
+#define ClipPolyDir 
+#define ClipPolyLibDir 
+#endif
+
+#if 0
+#define QtDir 
+#define QtLibDir 
+#define QtIncDir 
+#endif
+
+#if 0
+#define TiffDir 
+#define TiffLibDir 
+#define TiffIncDir 
+#endif
+
+#undef CCDriver
+#define CCDriver g++
+
+#undef CDriver
+#define CDriver gcc
+
+#undef GPlusPlusIncludeDir
+#define GPlusPlusIncludeDir 
+
+#undef LibStdCPlusPlusV3
+#define LibStdCPlusPlusV3 1
+
+#undef Typedef_socklen_t
+#define Typedef_socklen_t YES
+
+#undef InstallRelative
+#define InstallRelative NO
+
+#undef UseRpath
+#define UseRpath NO
+
+#define IvToolsSrcRoot /home/merck/Code/PACK/ivtools/src_ivtools
+
+
