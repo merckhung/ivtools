@@ -1,4 +1,4 @@
-# ivtools - Modernized C++ Build System
+# ivtools - w/ Modernized C++ Build System
 
 This project is a modernization of the legacy `ivtools` C++ framework, originally developed at Stanford and SGI. It replaces the complex legacy `Imake` and `Makefile` system with a streamlined, direct Bazel build.
 
