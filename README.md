@@ -1,4 +1,4 @@
-# ivtools - w/ Modernized C++ Build System
+# ivtools - the GUI/Graph code "Design Patterns: Elements of Reusable Object-Oriented Software" book talks about
 
 This project is a modernization of the legacy `ivtools` C++ framework, originally developed at Stanford and SGI. It replaces the complex legacy `Imake` and `Makefile` system with a streamlined, direct Bazel build.
 
