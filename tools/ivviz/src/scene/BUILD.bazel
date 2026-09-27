@@ -1,0 +1,26 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+    name = "design_script",
+    srcs = ["design_script.cc"],
+    hdrs = ["design_script.h"],
+)
+
+cc_library(
+    name = "scene",
+    srcs = [
+        "scene.cc",
+        "text.cc",
+    ],
+    hdrs = [
+        "scene.h",
+        "text.h",
+    ],
+    deps = [
+        ":design_script",
+        "@skia",
+    ],
+)
+exports_files(["design_script.cc"])

@@ -62,6 +62,26 @@ Comprehensive documentation is available in the `docs/` directory:
 - [BUILD_SUMMARY.md](docs/BUILD_SUMMARY.md): Explanation of the Bazel build structure.
 - [LIST_OF_CLASSES.md](docs/LIST_OF_CLASSES.md): Reference for core framework classes.
 - Technical guides for [idraw](docs/IDRAW.md), [comdraw](docs/COMDRAW.md), [graphdraw](docs/GRAPHDRAW.md), and [drawtool](docs/DRAWTOOL.md).
+- [tools/ivviz](tools/ivviz/README.md): an animated, Skia + Vulkan visualizer of the design (see below).
+
+## Design Visualizer (ivviz)
+
+[`tools/ivviz`](tools/ivviz/README.md) is an animated explanation of how ivtools is designed. It shows which real classes (InterViews glyphs and kits, Unidraw components, views, tools and commands, ComTerp functions) play which design pattern, and how calls and data flow between them, in nine guided tours with call traces taken from the sources. It is written in C++20 with **Skia** (drawing) and **Vulkan** (animated backdrop, compositing, window or headless screenshots), and built with its own **Bazel** module:
+
+```bash
+cd tools/ivviz
+bazel run //:ivviz            # interactive window: Space pause, ←/→ tour, 1-9 jump
+bazel test //tests/...        # tour consistency + every cited file/method exists in ivtools/src
+tools/screenshots.sh          # regenerate the screenshots below (headless; Mesa lavapipe works)
+```
+
+![A mouse drag: tool → manipulator → command](tools/ivviz/docs/screenshots/06_Tool_Command.png)
+
+| | | |
+|---|---|---|
+| ![Layers](tools/ivviz/docs/screenshots/01_Layers.png)<br>1. Layers: Facade, Template Method | ![Glyphs](tools/ivviz/docs/screenshots/02_Glyphs.png)<br>2. Glyphs: Composite, Decorator, Flyweight | ![Kits & reps](tools/ivviz/docs/screenshots/03_Kits_reps.png)<br>3. Kits & reps: Abstract Factory, Singleton, Bridge |
+| ![Events](tools/ivviz/docs/screenshots/04_Events.png)<br>4. Events: Observer, Command | ![Subjects & views](tools/ivviz/docs/screenshots/05_Subjects_views.png)<br>5. Subjects & views: Observer, Composite, Factory Method | ![Tool → Command](tools/ivviz/docs/screenshots/06_Tool_Command.png)<br>6. Tool → Command: Strategy, Command, Observer |
+| ![Update & undo](tools/ivviz/docs/screenshots/07_Update_undo.png)<br>7. Update & undo: Command, Mediator, Bridge | ![Catalog](tools/ivviz/docs/screenshots/08_Catalog.png)<br>8. Catalog: Factory Method, Prototype, Strategy | ![ComTerp](tools/ivviz/docs/screenshots/09_ComTerp.png)<br>9. ComTerp: Interpreter, Command, Adapter |
 
 ---
 *For more information on the original project, visit [ivtools.org](http://www.ivtools.org).*

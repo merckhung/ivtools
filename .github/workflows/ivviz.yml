@@ -1,0 +1,41 @@
+name: ivviz
+
+# The design visualiser (tools/ivviz): builds Skia from source, so it only
+# runs when that directory changes.
+on:
+  push:
+    paths: ["tools/ivviz/**", ".github/workflows/ivviz.yml"]
+  pull_request:
+    paths: ["tools/ivviz/**", ".github/workflows/ivviz.yml"]
+  workflow_dispatch:
+
+jobs:
+  build-test-screenshots:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: tools/ivviz
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Vulkan (lavapipe), GLFW, glslang, fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libvulkan1 mesa-vulkan-drivers \
+            libglfw3-dev glslang-tools fonts-dejavu-core
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/bazel
+          key: ivviz-bazel-${{ hashFiles('tools/ivviz/MODULE.bazel', 'tools/ivviz/third_party/skia/*') }}
+          restore-keys: ivviz-bazel-
+      - name: Build
+        run: bazel build //:ivviz
+      - name: Tests
+        run: bazel test //tests/...
+      - name: Headless screenshots (lavapipe)
+        run: |
+          mkdir -p shots
+          ./bazel-bin/src/app/ivviz --screenshots=$PWD/shots
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ivviz-screenshots
+          path: tools/ivviz/shots/
