@@ -1,0 +1,23 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+cc_test(
+    name = "design_script_test",
+    srcs = ["design_script_test.cc"],
+    deps = ["//src/scene:design_script"],
+)
+
+# Checks the tours against the ivtools sources two directories up (the
+# runfile below is a symlink back into the source tree).
+cc_test(
+    name = "source_refs_test",
+    srcs = ["source_refs_test.cc"],
+    data = ["//src/scene:design_script.cc"],
+    deps = ["//src/scene:design_script"],
+)
+
+cc_test(
+    name = "scene_raster_test",
+    srcs = ["scene_raster_test.cc"],
+    tags = ["local"],  # reads the host's fonts
+    deps = ["//src/scene"],
+)

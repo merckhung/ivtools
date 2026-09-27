@@ -1,0 +1,6 @@
+package(default_visibility = ["//visibility:public"])
+
+alias(
+    name = "ivviz",
+    actual = "//src/app:ivviz",
+)

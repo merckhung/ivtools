@@ -1,0 +1,13 @@
+ivviz (part of ivtools)
+
+The build layout, the Skia overlay, the Vulkan plumbing and the application
+shell are adapted from OluxOS's tools/bootviz
+(https://github.com/merckhung/oluxos), which in turn adapts parts of
+twn_election (https://github.com/merckhung/twn_election), Copyright 2026
+twn_election authors, licensed under the Apache License, Version 2.0
+(LICENSE.twn_election): bazel/*.bzl, third_party/skia/*, tools/embed/*,
+tools/gen_skia_srcs.py, src/render/vk_loader.*, src/render/vk_context.*, and
+the frame plumbing in src/render/compositor.cc. Each carries a note in its
+header.
+
+Skia (fetched at build time): BSD-3-Clause, Google LLC.
